@@ -20,3 +20,18 @@ body {
 footer {
     position: relative !important;
 }
+
+td.red {
+    background-color: red;
+}
+td.green {
+    background-color: green;
+}
+td.yellow {
+    background-color: yellow;
+}
+
+td.lightgreen {
+    background-color: lightgreen;
+}
+
