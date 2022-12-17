@@ -73,7 +73,7 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
+                <tr class="@item.IsRuleMatchedClass">
                     @* <td>
                 @Html.DisplayFor(modelItem => item.Id)
                 </td>*@

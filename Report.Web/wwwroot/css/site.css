@@ -34,4 +34,10 @@ td.yellow {
 td.lightgreen {
     background-color: lightgreen;
 }
+tr.orange {
+    background-color: orange;
+}
+tr.lightcoral {
+    background-color: lightcoral;
+}
 

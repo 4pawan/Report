@@ -81,7 +81,7 @@ namespace Report.Web.EF
                 {
                     return green;
                 }
-               
+
                 var isAfter03Pm = TimeSpan.Compare(DayMaxHighReachedAt.TimeOfDay, new TimeSpan(15, 0, 0));
                 if (isAfter03Pm != -1)
                 {
@@ -123,5 +123,28 @@ namespace Report.Web.EF
             }
         }
 
+
+
+
+
+
+        [NotMapped]
+        public string IsRuleMatchedClass
+        {
+            get
+            {
+                //rule 1: if gap down thn closing should be -ve or not more thn gap +50 
+                if (Gap < 0)
+                {
+                    if (CloseFrmY < 0 || Gap + 50 >= CloseFrmY)
+                    {
+                        return "orange";
+                    }
+
+                    return "lightcoral";
+                }
+                return "";
+            }
+        }
     }
 }
