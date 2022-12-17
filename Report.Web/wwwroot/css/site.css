@@ -21,12 +21,20 @@ footer {
     position: relative !important;
 }
 
+.table-header {
+    background-color: darkgray;
+    position: sticky;
+    top: 0;
+}
+
 td.red {
     background-color: red;
 }
+
 td.green {
     background-color: green;
 }
+
 td.yellow {
     background-color: yellow;
 }
@@ -34,10 +42,11 @@ td.yellow {
 td.lightgreen {
     background-color: lightgreen;
 }
+
 tr.orange {
     background-color: orange;
 }
+
 tr.lightcoral {
     background-color: lightcoral;
 }
-
