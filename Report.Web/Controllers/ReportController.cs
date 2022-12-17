@@ -15,7 +15,7 @@ namespace Report.Web.Controllers
         // GET: reportController1
         public ActionResult Index()
         {
-            var list = _context.NiftyWeekly.AsEnumerable() ;
+            var list = _context.NiftyWeekly.OrderByDescending(d=>d.Date).AsEnumerable() ;
             return View(list);
         }
 

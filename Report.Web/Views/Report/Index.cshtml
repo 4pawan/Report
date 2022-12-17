@@ -9,12 +9,15 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
+
+<div class="row col-8">
+
+    <table class="table table-striped table-bordered w-75 small">
+        <thead>
         <tr>
-           @* <th>
+            @* <th>
                 @Html.DisplayNameFor(model => model.Id)
-            </th>*@
+                </th>*@
             <th>
                 @Html.DisplayNameFor(model => model.Date)
             </th>
@@ -71,73 +74,76 @@
             </th>
             <th></th>
         </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-           @* <td>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @* <td>
                 @Html.DisplayFor(modelItem => item.Id)
-            </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Open)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.High)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Low)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Close)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DayLowToHigh)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PrevDayClose)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HighFrmY)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LowFrmY)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CloseFrmY)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item._10AM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item._10_30AM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item._1PM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item._2PM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item._2_25PM)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gap)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DayMaxHighReachedAt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DayMaxLowReachedAt)
-            </td>
-          @*  <td>
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Open)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.High)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Low)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Close)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DayLowToHigh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrevDayClose)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HighFrmY)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LowFrmY)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CloseFrmY)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item._10AM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item._10_30AM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item._1PM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item._2PM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item._2_25PM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gap)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DayMaxHighReachedAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DayMaxLowReachedAt)
+                </td>
+                @*  <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>*@
-        </tr>
-}
-    </tbody>
-</table>
+                </td>*@
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
