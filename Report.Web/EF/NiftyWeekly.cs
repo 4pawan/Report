@@ -65,6 +65,11 @@ namespace Report.Web.EF
         [Display(Name = "LowTime")]
         public DateTime DayMaxLowReachedAt { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:0.00}")]
+        [NotMapped]
+        [Display(Name = "LMC")]
+        public double _2_3_30Change => CloseFrmY - _2PM;
+
         [NotMapped]
         public string DayMaxHighReachedClass
         {
