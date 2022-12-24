@@ -140,13 +140,6 @@ namespace Report.Web.EF
         {
             get
             {
-
-                //rule 3
-                if (_10AM > Gap && _10_30AM > _10AM)
-                {
-                    return "orangered";
-                }
-
                 //rule 1: if gap down thn closing should be -ve or not more thn gap +50 
                 if (Gap < 0)
                 {
@@ -168,6 +161,13 @@ namespace Report.Web.EF
 
                     return "lightcoral";
                 }
+
+                //rule 3
+                if (_10AM > Gap && _10_30AM > _10AM)
+                {
+                    return "orangered";
+                }
+                
                 return "";
             }
         }
