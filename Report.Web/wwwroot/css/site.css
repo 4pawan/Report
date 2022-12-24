@@ -30,6 +30,10 @@ footer {
 td.red {
     background-color: red;
 }
+tr.orangered {
+    background-color: orangered;
+}
+
 
 td.green {
     background-color: green;
@@ -41,6 +45,10 @@ td.yellow {
 
 td.lightgreen {
     background-color: lightgreen;
+}
+
+td.lightblue {
+    background-color: lightblue;
 }
 
 tr.orange {

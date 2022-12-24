@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics;
 
 namespace Report.Web.EF
 {
+    [DebuggerDisplay("{IsRuleMatchedClass}-{Date}")]
     public class NiftyWeekly
     {
         public int Id { get; set; }
@@ -138,10 +140,28 @@ namespace Report.Web.EF
         {
             get
             {
+
+                //rule 3
+                if (_10AM > Gap && _10_30AM > _10AM)
+                {
+                    return "orangered";
+                }
+
                 //rule 1: if gap down thn closing should be -ve or not more thn gap +50 
                 if (Gap < 0)
                 {
                     if (CloseFrmY < 0 || Gap + 50 >= CloseFrmY)
+                    {
+                        return "orange";
+                    }
+
+                    return "lightcoral";
+                }
+
+                //rule 2: if gap up > 100 and 10am < gap up then closefromY < gapUp...so short ap gapUp 
+                if (Gap > 100 && _10AM < Gap)
+                {
+                    if (CloseFrmY < Gap)
                     {
                         return "orange";
                     }
