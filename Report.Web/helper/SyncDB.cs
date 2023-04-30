@@ -20,11 +20,15 @@ namespace Report.Web.helper
             {
                 var _date = DateTime.Parse(Convert.ToString(c[0]));
                 count++;
-                if (!IsThursday(_date) || dbContext.NiftyWeekly.Any(d => d.Date == _date))
-                {
-                    continue;
-                }
 
+                if (WeeklyNonThursdayDates.TradingDates.All(d => d.Date != _date))
+                {
+                    if (!IsThursday(_date) || dbContext.NiftyWeekly.Any(d => d.Date == _date))
+                    {
+                        continue;
+                    }
+                }
+                
                 var candle = new NiftyWeekly();
                 candle.Date = _date;
                 double Open = Convert.ToDouble(c[1]);
